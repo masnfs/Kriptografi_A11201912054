@@ -24,7 +24,7 @@ huruf = [i for i in hrf]
 #START kunci default dan setter
 encrypted = True
 K = matriks(5,6,2,3)
-Praw = "St"
+Praw = "Strike Now"
 P = Praw.replace(" ","").lower()
 C = ""
 pisahP = plaintext_proses(Praw)
