@@ -49,6 +49,7 @@ Hill Chiper
 [4] Ganti Kunci
 [0] Exit
 
+Cipher Status: {'Encypted' if encrypted == True else 'Not Encrypted/User Tampering *Please Choose Option Number 1*'}
 PlainText saat ini: {Praw}
 PlainText diproses: {P}
 Kunci Saat ini:
@@ -64,6 +65,7 @@ Cipher Text:
         print("Exit!")
         exit()
     elif uinp == "1":
+        encrypted = True
         C = ""
         pisahP = plaintext_proses(Praw)
 
@@ -103,6 +105,7 @@ Cipher Text:
         Praw = input("Masukkan PlainText>> ")
         P = Praw.replace(" ","").lower()
         print("Jangan Lupa Enkripsi Lagi !!")
+        encrypted = False
     elif uinp == "4":
         print("""
 Layout Matriks Kunci:
@@ -110,5 +113,6 @@ Layout Matriks Kunci:
 2a | 2b     
         """)
         K = matriks(int(input("Angka 1a > ")), int(input("Angka 1b > ")), int(input("Angka 2a > ")), int(input("Angka 2b > ")))
+        encrypted = False
     else:
         pass
